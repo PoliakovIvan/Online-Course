@@ -1,0 +1,31 @@
+{% load static %}
+
+{% block content %}
+  {% for course in course_list %}
+  <h1>Featured Courses</h1>
+    <p>Course Name: {{ course.course_name }}</p>
+    <p>Start Date: {{ course.start_date }}</p>
+    <p>Duration: {{ course.course_duration }} days</p>
+    <p>Price: ${{ course.course_price }}</p>
+
+    <p>Teachers:</p>
+    {% for teacher in course.teachers.all %}
+    {% if course in teacher.courses.all %}
+      <p>{{ teacher.teacherName }}</p>
+      <img src="{{ teacher.teacherPhoto.url }}" alt="Teacher Photo" width="300" >
+    {% endif %}
+  {% endfor %}
+
+  <h1>Meet our team</h1>
+  <div style="overflow: auto;">
+    {% for teacher in teachers %}
+      <div style="margin: 10px; text-align: center; display: inline-block;">
+        <img src="{{ teacher.teacherPhoto.url }}" alt="Teacher Photo" width="300">
+        <p>{{ teacher.teacherName }}</p>
+        <p>{{ teacher.jobTitle }}</p>
+      </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+
+{% endblock %}

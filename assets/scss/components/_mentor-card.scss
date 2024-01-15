@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as variables;
+
+.mentor {
+    &__image {
+        padding-top: 21.5rem;
+
+        position: relative;
+
+        border-radius: 0.25rem;
+        overflow: hidden;
+
+        & img {
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__gradient {
+        height: 100%;
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+
+        background-image: variables.$card-gradient;
+    }
+
+
+    &__info {
+        text-align: center;
+
+        margin-top: 1rem;
+    }
+
+    &__name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    &__position {
+        color: variables.$gray-700;
+
+        margin-top: 0.25rem;
+    }
+}

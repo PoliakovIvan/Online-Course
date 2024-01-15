@@ -1,0 +1,84 @@
+@use "../abstracts/variables" as variables;
+
+header {
+    width: 100%;
+    // prod version 
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: 30;
+}
+
+.header {
+    &__desktop {
+        padding: 1.25rem 0;
+
+        background-color: variables.$gray-900;
+
+        & nav {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__mobile {
+        & nav {
+            display: flex;
+            flex-direction: column;
+
+            row-gap: 2rem;
+        }
+    }
+
+    &__logo {
+        width: 8rem;
+        height: 1.25rem;
+
+        &--dark {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        & a {
+            font-weight: 700;
+            color: inherit;
+        }
+    }
+
+    &__buttons {
+        display: none;
+    }
+
+    &__burger {
+        & svg {
+            fill: variables.$primary;
+        }
+    }
+}
+
+.mobile-header {
+    height: 100svh;
+
+    background-color: variables.$gray-900;
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.75rem;
+
+        & a {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: variables.$gray-700;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.75rem;
+    }
+}

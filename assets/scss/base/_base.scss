@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as variables;
+
+body {
+    font-family: variables.$font-family;
+    font-size: variables.$font-size;
+    font-weight: variables.$font-weight;
+    line-height: variables.$line-height;
+    color: variables.$gray-800;
+}
+
+svg {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    fill: variables.$gray-700;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.left-full {
+    transform: translateX(-100%)
+}
+
+.left-0 {
+    transform: translateX(0)
+}

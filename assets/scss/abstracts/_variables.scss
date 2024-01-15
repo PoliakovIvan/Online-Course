@@ -1,0 +1,50 @@
+// font
+$font-family: "Lato";
+$font-size: 1rem;
+$font-weight: 400;
+$line-height: 1.6;
+
+// sizes
+$content-width: 1230;
+$content-offset: 16;
+$container-width: calc(#{$content-width + $content-offset}px);
+
+$mn-width: 320px;
+$xs: 479px;
+$sm: 640px;
+$md: 768px;
+$ml: 992px;
+$lg: 1024px;
+$xl: 1280px;
+$xl-2: #{$container-width};
+
+// colors
+$primary: #ff3f3a;
+$secondary: #ffcf2d;
+$success: #03cea4;
+$warning: #f89828;
+$danger: #ff4242;
+$info: #5a87fc;
+$gray-900: #1e212c;
+$gray-800: #424551;
+$gray-700: #787a80;
+$gray-600: #9a9ca5;
+$gray-500: #b3b7bc;
+$gray-400: #d7dadd;
+$gray-300: #e5e8ed;
+$gray-200: #f4f5f6;
+$gray-100: #f9f9f9;
+$white: #fff;
+
+
+// @mixin hoverMob {
+//     @media (any-hover: hover) {
+//         &:hover {
+//             @content;
+//         }
+//     }
+// }
+
+// gradients
+$card-gradient: linear-gradient(180deg, rgba(30, 33, 44, 0.00) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.77) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%);
+$button-gradient: linear-gradient(56deg, #ff3f3a 0%, #f75e05 100%);

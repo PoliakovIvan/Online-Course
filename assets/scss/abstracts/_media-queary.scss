@@ -1,0 +1,111 @@
+@use "./variables" as variables;
+
+// 479px
+@media (min-width: variables.$xs) {
+    .course {
+        &__image {
+            max-width: 40%;
+            max-width: 35.8333%;
+        }
+
+        &__body {
+            padding: 1.5rem;
+        }
+
+        &__category {
+            font-size: 0.875rem;
+        }
+
+        &__name {
+            font-size: 1.25rem;
+        }
+
+        &__info {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+// 640px 
+@media (min-width: variables.$sm) {
+    .section {
+        &__top {
+            flex-direction: row;
+            align-items: center;
+            column-gap: 1.5rem;
+        }
+
+        &__heading {
+            font-size: 2.875rem;
+
+            &:last-child {
+                margin-top: 0.5rem;
+            }
+        }
+
+        &__subtitle {
+            font-size: 1rem;
+        }
+
+        &__bottom {
+            &:last-child {
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: variables.$md) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1.5rem
+    }
+}
+
+// 992px 
+@media (min-width: variables.$ml) {
+    .header {
+        &__desktop {
+            background-color: transparent;
+
+            & nav {
+                justify-content: normal;
+                align-items: center;
+                gap: 0 1.125vw;
+            }
+        }
+
+        &__mobile {
+            display: none;
+        }
+
+        &__logo {
+            &--dark {
+                display: block;
+            }
+
+            &--light {
+                display: none;
+            }
+        }
+
+        &__menu {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            gap: 1.25rem 3.5rem;
+        }
+
+        &__buttons {
+            display: flex;
+            gap: 0 1rem;
+        }
+
+        &__burger {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: variables.$ml) {}

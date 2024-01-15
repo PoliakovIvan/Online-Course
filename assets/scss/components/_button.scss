@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as variables;
+
+.button {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 3.25;
+    text-align: center;
+
+    padding: 0 2.5rem;
+
+    display: block;
+
+    border-radius: 0.25rem;
+
+    &--primary {
+        background-image: variables.$button-gradient;
+        color: variables.$white;
+    }
+
+    &--outline {
+        box-shadow: 0 0 0 1px variables.$primary;
+        color: variables.$primary;
+    }
+}

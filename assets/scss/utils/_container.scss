@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as variables;
+
+.container {
+    max-width: variables.$container-width;
+
+    padding: 0 1rem;
+    margin: 0 auto;
+}

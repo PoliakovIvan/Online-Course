@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as variables;
+
+.section {
+    padding-top: 7.5rem;
+    padding-bottom: 11.25rem;
+
+    &__top {
+        color: variables.$gray-900;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        row-gap: 1.25rem;
+
+        & div {
+            flex-grow: 1;
+        }
+    }
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 900;
+        line-height: 1.3;
+
+        &:last-child {
+            margin-top: 0.25rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 0.0625rem;
+        text-transform: uppercase;
+    }
+
+    &__bottom {
+        &:last-child {
+            margin-top: 3rem;
+        }
+    }
+}

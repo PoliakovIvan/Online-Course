@@ -22,3 +22,17 @@ logs
 .env
 .env.*
 !.env.example
+
+
+# back
+teacher_photos
+venv
+templates
+settings
+apps
+config
+
+db.sqlite3
+manage.py
+requirements.txt
+

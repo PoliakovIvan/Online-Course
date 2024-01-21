@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as variables;
+@import '../abstracts/mixins/disable-mobile-hover';
 
 body {
     font-family: variables.$font-family;
@@ -15,6 +16,128 @@ svg {
     fill: variables.$gray-700;
 }
 
+.category {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: white;
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    display: inline-block;
+
+    border-radius: 0.25rem;
+}
+
+.pare-button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.radius-button {
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+    background-color: variables.$gray-200;
+
+    @include hover {
+        background-color: variables.$primary;
+
+        svg {
+            fill: variables.$white;
+        }
+    }
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        vertical-align: middle;
+
+        fill: variables.$gray-800;
+    }
+
+    &.next {
+        transform: rotate(-180deg);
+    }
+}
+
+// font base styles
+.text-72 {
+    font-size: 4.5rem;
+    line-height: 1.3;
+}
+
+.text-64 {
+    font-size: 4rem;
+    line-height: 1.3;
+}
+
+.text-56 {
+    font-size: 3.5rem;
+    line-height: 1.3;
+}
+
+.text-48 {
+    font-size: 3rem;
+    line-height: 1.3;
+}
+
+.text-32 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.text-28- {
+    font-size: 1.75rem;
+    line-height: 1.5;
+}
+
+.text-24 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.text-20 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.text-18 {
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+.text-16 {
+    font-size: 1rem;
+
+    &--15 {
+        line-height: 1.5;
+    }
+
+    &--16 {
+        line-height: 1.6;
+    }
+}
+
+.text-14 {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.text-12 {
+    font-size: 0.75rem;
+}
+
+.text-10 {
+    font-size: 0.625rem;
+    line-height: 1.5;
+}
+
+
+// grid/flex styles
 .flex {
     display: flex;
 }

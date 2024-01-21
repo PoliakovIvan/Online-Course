@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as variables;
+@use "~/assets/scss/abstracts/variables" as variables;
 
 .course {
     min-height: 13.375rem;
@@ -30,19 +30,6 @@
         row-gap: 1.25rem;
 
         background-color: variables.$white;
-    }
-
-    &__category {
-        font-size: 0.75rem;
-        line-height: 1.5;
-        color: white;
-
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-
-        display: inline-block;
-
-        border-radius: 0.25rem;
     }
 
     &__name {

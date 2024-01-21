@@ -2,6 +2,10 @@
 
 // 479px
 @media (min-width: variables.$xs) {
+    .category {
+        font-size: 0.875rem;
+    }
+
     .course {
         &__image {
             max-width: 40%;
@@ -10,10 +14,6 @@
 
         &__body {
             padding: 1.5rem;
-        }
-
-        &__category {
-            font-size: 0.875rem;
         }
 
         &__name {
@@ -32,10 +32,19 @@
         &__top {
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
             column-gap: 1.5rem;
         }
 
-        &__heading {
+        &__bottom {
+            &:last-child {
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    .heading {
+        &__title {
             font-size: 2.875rem;
 
             &:last-child {
@@ -45,12 +54,6 @@
 
         &__subtitle {
             font-size: 1rem;
-        }
-
-        &__bottom {
-            &:last-child {
-                margin-top: 3rem;
-            }
         }
     }
 }
